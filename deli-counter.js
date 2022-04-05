@@ -1,9 +1,5 @@
 // 1. Write your functions here
-/**
- * input : array,string
- * output : string
- * side-eff: array
- */
+
 function takeANumber(arr, str) {
   arr.push(str);
   for (let i = 0; i < arr.length; i++) {
@@ -15,10 +11,7 @@ function takeANumber(arr, str) {
 
 function nowServing(arr) {
   if (arr.length > 0) {
-    for (let i = 0; i < arr.length; i++) {
-      console.log(`Currently serving ${arr.shift()}`);
-      break;
-    }
+    console.log(`Currently serving ${arr.shift()}`);
   } else {
     console.log("There is nobody waiting to be served!");
   }
@@ -26,7 +19,6 @@ function nowServing(arr) {
 
 function line(arr) {
   let newArr = [];
-  // console.log(arr)
   for (let i = 0; i < arr.length; i++) {
     newArr.push(i + 1 + ". " + arr[i]);
   }
@@ -37,7 +29,6 @@ function line(arr) {
     console.log("The line is currently empty.");
   }
 }
-
 // 2. Example Usage
 
 const katzDeli = [];
@@ -64,7 +55,7 @@ line(katzDeli); //=> "The line is currently: 1. Kent 2. Matz"
 // line(katzDeli);
 // takeANumber(katzDeli, "MG");
 // takeANumber(katzDeli, "Valen");
-//line(katzDeli);
+//  line(katzDeli);
 //   nowServing(katzDeli);
 // line(katzDeli);
 //  nowServing(katzDeli);
